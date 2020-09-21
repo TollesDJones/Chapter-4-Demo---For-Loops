@@ -1,8 +1,17 @@
-# Chapter 4 Demo
 # Mr. Jones
+# This is a sample Python script Based on CH.4 material
+# ASCII text generated with http://www.network-science.de/ascii/
+# Donte Jones jones_donte@dublinschools.net
+# IT Academy @ Emerald Campus
+#
+# Notes PYCHARM users: Use 'CTRL+/' keys to uncomment or comment any selected lines of code
+
+
+
 """
 FOR LOOPS
 Work with any 'Sequence' structure in Python
+With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
 
 Example
 	for letter in word:
@@ -249,44 +258,44 @@ Tuples are 'Immutable' where 'Lists' are 'Mutable'
 # Demonstrates tuples
 
 # create a tuple with some items and display with a for loop
-inventory = ("sword",
-             "armor",
-             "shield",
-             "healing potion")
-print("Your items:")
-for item in inventory:
-    print(item)
-
-input("\nPress the enter key to continue.")
-
-# get the length of a tuple
-print("You have", len(inventory), "items in your possession.")
-
-input("\nPress the enter key to continue.")
-
-# test for membership with in
-if "healing potion" in inventory:
-    print("You will live to fight another day.")
-
-# display one item through an index
-index = int(input("\nEnter the index number for an item in inventory: "))
-print("At index", index, "is", inventory[index])
-
-# display a slice
-print("You have", len(inventory), "items in your possession.")
-start = int(input("\nEnter the index number to begin a slice: "))
-finish = int(input("Enter the index number to end the slice: "))
-print("inventory[", start, ":", finish, "] is", end=" ")
-print(inventory[start:finish])
-
-input("\nPress the enter key to continue.")
-
-# concatenate two tuples
-chest = ("gold", "gems")
-print("\n\nYou find a chest.  It contains:")
-print(chest)
-print("You add the contents of the chest to your inventory.")
-inventory += chest
-print("Your inventory is now:")
-print(inventory)
+# inventory = ("sword",
+#              "armor",
+#              "shield",
+#              "healing potion")
+# print("Your items:")
+# for item in inventory:
+#     print(item)
+#
+# input("\nPress the enter key to continue.")
+#
+# # get the length of a tuple
+# print("You have", len(inventory), "items in your possession.")
+#
+# input("\nPress the enter key to continue.")
+#
+# # test for membership with in
+# if "healing potion" in inventory:
+#     print("You will live to fight another day.")
+#
+# # display one item through an index
+# index = int(input("\nEnter the index number for an item in inventory: "))
+# print("At index", index, "is", inventory[index])
+#
+# # display a slice
+# print("You have", len(inventory), "items in your possession.")
+# start = int(input("\nEnter the index number to begin a slice: "))
+# finish = int(input("Enter the index number to end the slice: "))
+# print("inventory[", start, ":", finish, "] is", end=" ")
+# print(inventory[start:finish])
+#
+# input("\nPress the enter key to continue.")
+#
+# # concatenate two tuples
+# chest = ("gold", "gems")
+# print("\n\nYou find a chest.  It contains:")
+# print(chest)
+# print("You add the contents of the chest to your inventory.")
+# inventory += chest
+# print("Your inventory is now:")
+# print(inventory)
 
