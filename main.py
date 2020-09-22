@@ -12,6 +12,7 @@
 FOR LOOPS
 Work with any 'Sequence' structure in Python
 With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+It accepts the use of 'break' & 'continue'
 
 Example
 	for letter in word:
@@ -50,7 +51,7 @@ Example
 SEQUENCE OPERATORS 
 
 Sequence operators can tell you information about a sequence
-Here we will look at two important opeators:
+Here we will look at two important operators:
 len(), and 'in'
 
 """
@@ -59,7 +60,7 @@ len(), and 'in'
 
 # Example 1
 # Demonstrates the for loop with a string
-
+#
 # word = input("Enter a word: ")
 #
 # print("\nHere's each letter in your word:")
@@ -89,30 +90,30 @@ SEQUENTIAL vs RANDOM ACCESS
 Previously we looked at accessing each element of a sequence in order, or sequentially
 We can also access each element of a sequence directly without traversing through the sequence
 This is known as 'Random Access' Python sequence structures support Random Access
-This is acomplished using an elements 'index' or position
+This is accomplished using an elements 'index' or position
 
 """
 
 # Example 1
 # import random #Calling the Random class gives us acces to the random methods
 #
-# word = "index" #Setting the value of the word variable
-#
-# high = len(word) #Using the len() function to automatically get the length of the string/ sequence
-#                  #starts from left to right or index position [0] to [4]
-#
-# low = -len(word) #Using the reverse direction to find the length of word from right to left
-#                  #index positions [-5] to [-1]
-#
-#
-# for i in range(10): #Set the number of steps for the loop to run 10 times [0-9]
-#     position = random.randrange(low, high) # Chooses a random index position
-#                                             # anywhere between (-5 and -1) & (0 to 4) for added variation
-#                                             # The first letter in 'word' is both index position [0] & [-5]
-#
-#     print("You are at index [", position, "] in 'word' \t", " the letter is: ", word[position])
-#         #The statement above first prints the randomly chosen index position
-#         # then the letter associated with that position
+word = "index" #Setting the value of the word variable
+
+high = len(word) #Using the len() function to automatically get the length of the string/ sequence
+                 #starts from left to right or index position [0] to [4]
+
+low = -len(word) #Using the reverse direction to find the length of word from right to left
+                 #index positions [-5] to [-1]
+
+
+for i in range(10): #Set the number of steps for the loop to run 10 times [0-9]
+    position = random.randrange(low, high) # Chooses a random index position
+                                            # anywhere between (-5 and -1) & (0 to 4) for added variation
+                                            # The first letter in 'word' is both index position [0] & [-5]
+
+    print("You are at index [", position, "] in 'word' \t", " the letter is: ", word[position])
+        #The statement above first prints the randomly chosen index position
+        # then the letter associated with that position
 
 
 
@@ -145,17 +146,17 @@ Those that do not support this are 'Immutable' for example strings are Immutable
 #
 # print("\n\n-------------------------------------------MUTABLE-----------------------------------------------------------\n\n")
 #
-#
+
 #
 #                     #MUTABLE
 #
-# myList = [ "car", "boat", "motorcycle"]
-# print("myLinst currently has the values: \t", myList, "\n")
-#
-# myList[0] = "plane" #Here we mutated the value at index position [0] to the value 'plane'
-#                     #because lists are mutable
-#
-# print("Here we have replaced index position 0, 'car',  with the value 'plane' \t", myList)
+myList = [ "car", "boat", "motorcycle"]
+print("myLinst currently has the values: \t", myList, "\n")
+
+myList[0] = "plane" #Here we mutated the value at index position [0] to the value 'plane'
+                    #because lists are mutable
+
+print("Here we have replaced index position 0, 'car',  with the value 'plane' \t", myList)
 
 
 
@@ -163,17 +164,17 @@ Those that do not support this are 'Immutable' for example strings are Immutable
 # No Vowels
 # Demonstrates creating new strings with a for loop
 
-# message = input("Enter a message: ")
-# new_message = ""
-# VOWELS = "aeiou"
-#
-# print()
-# for letter in message:
-#     if letter.lower() not in VOWELS:
-#         new_message += letter
-#         print("A new string has been created:", new_message)
-#
-# print("\nYour message without vowels is:", new_message)
+message = input("Enter a message: ")
+new_message = ""
+VOWELS = "aeiou"
+
+print()
+for letter in message:
+    if letter.lower() not in VOWELS:
+        new_message += letter
+        print("A new string has been created:", new_message)
+
+print("\nYour message without vowels is:", new_message)
 
 
 
@@ -228,29 +229,29 @@ Tuples are 'Immutable' where 'Lists' are 'Mutable'
 # Hero's Inventory
 # Demonstrates tuple creation
 
-# # create an empty tuple
-# inventory = ()
-#
-# # treat the tuple as a condition
-# if not inventory: # If inventory has no items
-#     print("You are empty-handed.")
-#
-# input("\nPress the enter key to continue.")
-#
-# # create a tuple with some items
-# inventory = ("sword",
-#              "armor",
-#              "shield",
-#              "healing potion")
-#
-# # print the tuple
-# print("\nThe tuple inventory is:")
-# print(inventory)
-#
-# # print each element in the tuple
-# print("\nYour items:")
-# for item in inventory:
-#     print(item)
+# create an empty tuple
+inventory = ()
+
+# treat the tuple as a condition
+if not inventory: # If inventory has no items
+    print("You are empty-handed.")
+
+input("\nPress the enter key to continue.")
+
+# create a tuple with some items
+inventory = ("sword",
+             "armor",
+             "shield",
+             "healing potion")
+
+# print the tuple
+print("\nThe tuple inventory is:")
+print(inventory)
+
+# print each element in the tuple
+print("\nYour items:")
+for item in inventory:
+    print(item)
 
 
 # Example 2
@@ -258,13 +259,13 @@ Tuples are 'Immutable' where 'Lists' are 'Mutable'
 # Demonstrates tuples
 
 # create a tuple with some items and display with a for loop
-# inventory = ("sword",
-#              "armor",
-#              "shield",
-#              "healing potion")
-# print("Your items:")
-# for item in inventory:
-#     print(item)
+inventory = ("sword",
+             "armor",
+             "shield",
+             "healing potion")
+print("Your items:")
+for item in inventory:
+    print(item)
 #
 # input("\nPress the enter key to continue.")
 #
@@ -291,11 +292,11 @@ Tuples are 'Immutable' where 'Lists' are 'Mutable'
 # input("\nPress the enter key to continue.")
 #
 # # concatenate two tuples
-# chest = ("gold", "gems")
-# print("\n\nYou find a chest.  It contains:")
-# print(chest)
-# print("You add the contents of the chest to your inventory.")
-# inventory += chest
-# print("Your inventory is now:")
-# print(inventory)
+chest = ("gold", "gems")
+print("\n\nYou find a chest.  It contains:")
+print(chest)
+print("You add the contents of the chest to your inventory.")
+inventory += chest
+print("Your inventory is now:")
+print(inventory)
 
