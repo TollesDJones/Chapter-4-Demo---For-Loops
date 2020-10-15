@@ -6,17 +6,17 @@
 #
 # Notes PYCHARM users: Use 'CTRL+/' keys to uncomment or comment any selected lines of code
 
-
+import random
 
 """
-FOR LOOPS
-Work with any 'Sequence' structure in Python
-With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
-It accepts the use of 'break' & 'continue'
-
-Example
-	for letter in word:
-	    print(letter)
+# FOR LOOPS
+# Work with any 'Sequence' structure in Python
+# With the for loop we can execute a set of statements, once for each item in a list, tuple, set etc.
+# It accepts the use of 'break' & 'continue'
+#
+# Example
+# 	for letter in word:
+# 	    print(letter)
 
 
 """
@@ -25,15 +25,15 @@ Example
 # syntax for the function, range(start, stop, step)
 
 # Example 1
-# print("\nBasic loop structure")
-# for i in range(10):  # Range with a single parameter starts at 0 inclusively up to but not including the number passed
-#     print(i, end=" ")  # the end of the range in this case '10'  is exclusive
+print("\nBasic loop structure")
+for i in range(10):  # Range with a single parameter starts at 0 inclusively up to but not including the number passed
+    print(i, end=" ")  # the end of the range in this case '10'  is exclusive
 #
 #
 # # Example 2
 # print("\n\nCounting forwards w/ increment")
-# for i in range(0, 50, 5):  # Sets up your loop to loop through 0-49 includes 0 but excludes 50
-#     print(i, end=" ")  # The 3rd parameter passed controls the 'Count by/ or step' in this example 5
+for i in range(0, 50, 5):  # Sets up your loop to loop through 0-49 includes 0 but excludes 50
+    print(i, end=" ")  # The 3rd parameter passed controls the 'Count by/ or step' in this example 5
 #
 #
 # # Example 3
@@ -42,8 +42,8 @@ Example
 # # It looks like this
 #
 # print("\n\nCounting backwards w/ an increment")
-# for i in range(20, 0, -2):
-#     print(i, end=" ")
+for i in range(20, 0, -2):
+    print(i, end=" ")
 
 
 
@@ -61,25 +61,25 @@ len(), and 'in'
 # Example 1
 # Demonstrates the for loop with a string
 #
-# word = input("Enter a word: ")
+word = input("Enter a word: ")
 #
-# print("\nHere's each letter in your word:")
-# for letter in word:
-#     print(letter)
+print("\nHere's each letter in your word:")
+for letter in word:
+    print(letter)
 #
 
 # Example 2
 # Demonstrates the len() function and the in operator
 #
-# message = input("Enter a message: ")
-#
-# print("\nThe length of your message is:", len(message))
-#
-# print("\nThe most common letter in the English language, 'e',")
-# if "e" in message:
-#     print("is in your message.")
-# else:
-#     print("is not in your message.")
+message = input("Enter a message: ")
+
+print("\nThe length of your message is:", len(message))
+
+print("\nThe most common letter in the English language, 'e',")
+if "e" in message.lower():
+    print("is in your message.")
+else:
+    print("is not in your message.")
 
 
 
@@ -134,15 +134,15 @@ Those that do not support this are 'Immutable' for example strings are Immutable
 
                     #IMMUTABLE
 # print("\n\n-----------------------------------------IMMUTABLE-----------------------------------------------------------\n\n")
-# word = "Hello World!" #This sets 'word' equal to the string value on the right of the '=' sign
-# #word[0] = "Y"  #Uncomment this line to mutate the value at index position 0 'H' to the value 'Y'
-#                 #You will notice an error notifying you this is not allowed
-#
-#
-#
-# word = "Yellow World!" # Here we assigned a new value to the 'word' variable which is allowed
-#
-# print(word)
+word = "Hello World!" #This sets 'word' equal to the string value on the right of the '=' sign
+word[0] = "Y"  #Uncomment this line to mutate the value at index position 0 'H' to the value 'Y'
+                You will notice an error notifying you this is not allowed
+
+
+
+word = "Yellow World!" # Here we assigned a new value to the 'word' variable which is allowed
+
+print(word)
 #
 # print("\n\n-------------------------------------------MUTABLE-----------------------------------------------------------\n\n")
 #
@@ -197,23 +197,23 @@ Slicing 'Cheat Sheet'
 # Example 1
 # Demonstrates string slicing
 
-# word = "pizza"
-#
-# print("Enter the beginning and ending index for your slice of 'pizza'.")
-# print("Press the enter key at 'Begin' to exit.")
-#
-# # Start has no value
-# start = None
-# while start != "": # Compares value of start to an empty string
-#     start = (input("\nStart: "))
-#
-#     if start:
-#         start = int(start) # Casts start to an int
-#
-#         finish = int(input("Finish: "))
-#
-#         print("word[", start, ":", finish, "] is", end=" ")
-#         print(word[start:finish])
+word = "pizza"
+
+print("Enter the beginning and ending index for your slice of 'pizza'.")
+print("Press the enter key at 'Begin' to exit.")
+
+# Start has no value
+start = None
+while start != "": # Compares value of start to an empty string
+    start = (input("\nStart: "))
+
+    if start:
+        start = int(start) # Casts start to an int
+
+        finish = int(input("Finish: "))
+
+        print("word[", start, ":", finish, "] is", end=" ")
+        print(word[start:finish])
 
 
 
