@@ -191,35 +191,47 @@ Slicing 'Cheat Sheet'
 -5  -4  -3  -2  -1
 
 Slicing Example: 
-myList[start:end:step]
+    myList[start:end:step]
+    
 Stepping is optional and defaults to 1 if not specified
 """
 
 # Example 1
-# Demonstrates string slicing
+# Demonstrates Slicing a List
+
+myList = [] # Builds an empty List
+
+for i in range(10): # Loops through the range of numbers 0-10
+    myList.append(i) # Adds each item in the sequence to 'myList'
+
+print(myList) # Displays the contents of 'myList'
+print(myList[0:9]) # Display specified slice
 
 
-
-print("Enter the beginning and ending index for your slice of 'pizza'.")
-print("Press the enter key at 'Begin' to exit.")
-
-# Creating our list to slice
-word = "pizza"
-
-# Start has no value
-start = None
-# while start != "": # Compares value of start to an empty string
-while not start:  # Compares value of start to an empty string
-    start = (input("\nStart: "))
-
-    if start:
-        start = int(start) # Casts start to an int
-
-        finish = int(input("Finish: "))
-
-        print("word[", start, ":", finish, "] is", end=" ")
-        print('your slice is ', word[start:finish])
-        start = None
+# # Example 2
+# # Demonstrates string slicing
+#
+# print("Enter the beginning and ending index for your slice of 'pizza'.")
+# print("Press the enter key at 'Begin' to exit.")
+#
+# # Creating our list to slice
+# word []= "pizza"
+#
+# # Start has no value
+# start = None
+#
+# # while start != "": # Compares value of start to an empty string
+# while not start:  # Compares value of start to an empty string
+#     start = (input("\nStart: "))
+#
+#     if start:
+#         start = int(start) # Casts start to an int
+#
+#         finish = int(input("Finish: "))
+#
+#         print("word[", start, ":", finish, "] is", end=" ")
+#         print('your slice is ', word[start:finish])
+#         start = None
 
 
 """
